@@ -19,3 +19,18 @@ $softYellow: rgb(255,255,204);
 $hardBlue: rgb(37,112,146);
 $softBlue: rgb(140,173,188);
 $lightBlue: rgb(235,237,244);
+$green: rgb(88,163,77);
+$red: rgb(210,68,49);
+
+@mixin buttonColor($color) {
+	background: $color;
+	border: 1px solid darken($color, 15);
+	border-top: 1px solid darken($color, 10);
+
+	&:hover {
+		background: darken($color, 10);
+		border: 1px solid darken($color, 25);
+		border-top: 1px solid darken($color, 20);
+		transition: all .2s ease-out;
+	}
+}

@@ -10,6 +10,10 @@ This stylesheet only holds mobile and global styles.
 GENERAL GLOBAL STYLES 
 *********************/
 
+* {
+	box-sizing: border-box;
+}
+
 /* Typography */
 
 html {
@@ -26,6 +30,11 @@ h1 {
 	font-weight: 100;
 	font-size: 3em;
     margin: 0.5em 0;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-weight: 400;
 }
 
 /* Tables */
@@ -100,4 +109,50 @@ table {
 		background: none;;
 		border: none;
 	}
+}
+
+/* Forms */
+
+form {
+	margin-bottom: 1em;
+
+	label {
+		display: block;
+		margin-bottom: .25em;
+		font-weight: bold;
+	}
+
+	.formControl {
+		display: block;
+		padding: .325em;
+		margin-bottom: .5em;
+		font-size: 1.125em;
+		background: $offWhite;
+		border: 1px solid $lightGrey;
+		border-radius: 3px;
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+	}
+}
+
+/* Buttons */
+
+.button {
+	display: inline-block;
+	font-size: 1.25em;
+	text-align: center;
+	padding: .625em 1em;
+	border: 1px solid $lightGrey;
+	background: $offWhite;
+}
+
+.confirm {
+	color: white;
+	text-shadow: 0 1px 1px darken($green, 30);
+	@include buttonColor($green);
+}
+
+.cancel {
+	color: white;
+	text-shadow: 0 1px 1px darken($red, 30);
+	@include buttonColor($red);
 }
