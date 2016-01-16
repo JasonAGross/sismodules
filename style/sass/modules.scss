@@ -20,8 +20,9 @@ you set a great foundation, you won't need to add too many styles in
 the other stylesheets. Remember, keep it light: Speed is Important.
 */
 
-/* styles in base.scss */
 @import "normalize";
+
+/* Start base styles */
 @import "base";
 
 @media only screen and (min-width: 550px) {
@@ -34,6 +35,7 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 @media only screen and (min-width: 800px) {
 
 	/* styles in 800up.scss */
+	@import "grid";
 	@import "800up";
 
 }
