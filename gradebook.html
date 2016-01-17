@@ -126,14 +126,14 @@
 				<div class="modal container_12 clearfix">
 					<h3>Assignment Setup</h3>
 					<ul class="modalNav clearfix">
-						<li class="grid_4 alpha"><span class="icon-file-text-o"></span>Setup</li>
-						<li class="grid_4"><span class="icon-line-chart"></span>Curve</li>
-						<li class="grid_4 omega"><span class="icon-balance-scale"></span>Weight</li>
-						<li class="grid_4 alpha"><span class="icon-trash-o"></span>Delete</li>
-						<li class="grid_4"><span class="icon-page-add"></span>Copy</li>
-						<li class="grid_4 omega"><span class="icon-floppy-o"></span>Export</li>
+						<li class="grid_4 alpha" data-control="setupOptions"><span class="icon-file-text-o"></span>Setup</li>
+						<li class="grid_4" data-control="curveOptions"><span class="icon-line-chart"></span>Curve</li>
+						<li class="grid_4 omega" data-control="weightOptions"><span class="icon-balance-scale"></span>Weight</li>
+						<li class="grid_4 alpha" data-control="removeConfirmation"><span class="icon-trash-o"></span>Delete</li>
+						<li class="grid_4" data-control="copyOptions"><span class="icon-page-add"></span>Copy</li>
+						<li class="grid_4 omega" data-control="exportOptions"><span class="icon-floppy-o"></span>Export</li>
 					</ul>
-					<div class="setupOptions">
+					<div class="setupOptions modalPanel">
 						<form class="clearfix">
 							<div class="inputGroup grid_12">
 								<label for="assignName">Name</label>
@@ -167,17 +167,22 @@
 							</div>
 						</form>
 					</div>
-					<div class="curveOptions">
+					<div class="curveOptions modalPanel">
+						<p>Curve Assignment</p>
 					</div>
-					<div class="weightOptions">
+					<div class="weightOptions modalPanel">
+						<p>Weigh assignment</p>
 					</div>
-					<div class="removeConfirmation">
+					<div class="removeConfirmation modalPanel">
+						<p>Are you sure you want to remove this assignment?</p>
 					</div>
-					<div class="copyOptions">
+					<div class="copyOptions modalPanel">
+						<p>Copy assignment</p>
 					</div>
-					<div class="exportOptions">
+					<div class="exportOptions modalPanel">
+						<p>Download assignment</p>
 					</div>
-					<div class="buttonGroup clearfix">
+					<div class="buttonGroup modalControls clearfix">
 						<button class="button confirm">Apply</button>
 						<button class="button cancel">Cancel</button>
 					</div>
@@ -186,4 +191,5 @@
 		</div>
 	</body>
 
+	<script src="script/script.js"></script>
 </html>
