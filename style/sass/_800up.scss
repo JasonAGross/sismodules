@@ -115,6 +115,30 @@ Gradebook Module
 
 #gradebook {
 
+	.grades {
+
+		.value {
+			position: relative;
+			z-index: 1;
+		}
+
+		.cumulative {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+
+			polygon {
+				fill: transparentize($softBlue, .9);
+			}
+
+			polyline {
+				stroke: transparentize($softBlue, .75);
+				stroke-width: 4px;
+			}
+		}
+	}
+
 	.assignmentSettings {
 		width: 400px;
 

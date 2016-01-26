@@ -78,13 +78,14 @@ table {
 			padding-right: 1.5em;
 			border: 1px solid $lightGrey;
 
-			span {
+			span[class^="icon-"] {
 				display: none;
+				z-index: 1;
 			}
 
 			&:hover {
 
-				span {
+				span[class^="icon-"] {
 					display: inline;
 					position: absolute;
 					color: $lightGrey;

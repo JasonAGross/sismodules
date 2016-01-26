@@ -22,6 +22,9 @@ $lightBlue: rgb(235,237,244);
 $green: rgb(88,163,77);
 $red: rgb(210,68,49);
 
+/*********************
+Common Interface Elements
+*********************/
 @mixin buttonColor($color) {
 	background: $color;
 	border: 1px solid darken($color, 15);
