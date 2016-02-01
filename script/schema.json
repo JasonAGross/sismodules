@@ -1,0 +1,36 @@
+{
+	"school": [
+		{
+			"name": "testSchool",
+			"students": [
+				{
+					"name": "Student Smith"
+				},
+				{
+					"name": "Student Jones"
+				}
+			],
+			"teachers": [
+				{
+					"name": "Teacher Doe"
+				}
+			],
+			"classes": [
+				{
+					"name": "Physics"
+				},
+				{
+					"name": "Math"
+				}
+			],
+			"assignments": [
+				{
+					"name": "Assignment 1"
+				},
+				{
+					"name": "Assignment 2"
+				}
+			]
+		}
+	]
+}

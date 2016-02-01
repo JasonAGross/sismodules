@@ -13,3 +13,7 @@ $('.toggleSettings').click(function() {
 		leftOffset = $('.assignmentSettings').width() / 2;
 	$('.assignmentSettings').toggleClass('active').attr('style','top:' + (pos.top + topOffset) + ';left:' + (pos.left - leftOffset) + ';');
 });
+
+$(document).ready(function() {
+	var dataRef = new Firebase('https://shining-inferno-9979.firebaseio.com/');
+});
