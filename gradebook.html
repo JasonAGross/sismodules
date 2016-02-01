@@ -158,78 +158,134 @@
 							</svg>
 						</td>
 					</tr>
-					<tr class="addStudent">
+					<tr class="addNewStudent">
 						<td>
 							<button class="button">Add Student</button>
 						</td>
 					</tr>
 				</tbody>
 			</table>
-			<div class="component modalContainer assignmentSettings">
-				<div class="modal container_12 clearfix">
-					<h3>Assignment Setup</h3>
-					<ul class="modalNav clearfix">
-						<li class="grid_4 alpha" data-control="setupOptions"><span class="icon-file-text-o"></span>Setup</li>
-						<li class="grid_4" data-control="curveOptions"><span class="icon-line-chart"></span>Curve</li>
-						<li class="grid_4 omega" data-control="weightOptions"><span class="icon-balance-scale"></span>Weight</li>
-						<li class="grid_4 alpha" data-control="removeConfirmation"><span class="icon-trash-o"></span>Delete</li>
-						<li class="grid_4" data-control="copyOptions"><span class="icon-page-add"></span>Copy</li>
-						<li class="grid_4 omega" data-control="exportOptions"><span class="icon-floppy-o"></span>Export</li>
-					</ul>
-					<div class="setupOptions modalPanel">
-						<form class="clearfix">
-							<div class="inputGroup grid_12">
-								<label for="assignName">Name</label>
-								<input type="text" id="assignName" class="formControl">
-							</div>
-							<div class="inputGroup grid_6 alpha">
-								<label for="assignDate">Assigned On</label>
-								<input type="date" id="assignDate" class="formControl">
-							</div>
-							<div class="inputGroup grid_6 omega">
-								<label for="assignDue">Due Date</label>
-								<input type="date" id="assignDue" class="formControl">
-							</div>
-							<div class="inputGroup grid_12">
-								<label for="assignType">Assignment Type</label>
-								<select id="assignType" class="formControl">
-									<option>Points</option>
-									<option>Percentage</option>
-									<option>Percentage From Points</option>
-									<option>Letter Grade</option>
-									<option>Pass/Fail</option>
-								</select>
-							</div>
-							<div class="inputGroup grid_6 alpha">
-								<label for="assignScore">Max Score</label>
-								<input type="text" id="assignScore" class="formControl">
-							</div>
-							<div class="inputGroup grid_6 omega">
-								<label for="assignEmpty">Empty Value</label>
-								<input type="text" id="assignEmpty" class="formControl">
-							</div>
-						</form>
-					</div>
-					<div class="curveOptions modalPanel">
-						<p>Curve Assignment</p>
-					</div>
-					<div class="weightOptions modalPanel">
-						<p>Weigh assignment</p>
-					</div>
-					<div class="removeConfirmation modalPanel">
-						<p>Are you sure you want to remove this assignment?</p>
-					</div>
-					<div class="copyOptions modalPanel">
-						<p>Copy assignment</p>
-					</div>
-					<div class="exportOptions modalPanel">
-						<p>Download assignment</p>
-					</div>
-					<div class="buttonGroup modalControls clearfix">
-						<button class="button confirm">Apply</button>
-						<button class="button cancel">Cancel</button>
-					</div>
+		</div>
+		<div class="component modalContainer assignmentSettings">
+			<div class="modal container_12 clearfix">
+				<h3>Assignment Setup</h3>
+				<ul class="modalNav clearfix">
+					<li class="grid_4 alpha" data-control="setupOptions"><span class="icon-file-text-o"></span>Setup</li>
+					<li class="grid_4" data-control="curveOptions"><span class="icon-line-chart"></span>Curve</li>
+					<li class="grid_4 omega" data-control="weightOptions"><span class="icon-balance-scale"></span>Weight</li>
+					<li class="grid_4 alpha" data-control="removeConfirmation"><span class="icon-trash-o"></span>Delete</li>
+					<li class="grid_4" data-control="copyOptions"><span class="icon-page-add"></span>Copy</li>
+					<li class="grid_4 omega" data-control="exportOptions"><span class="icon-floppy-o"></span>Export</li>
+				</ul>
+				<div class="setupOptions modalPanel">
+					<form class="clearfix">
+						<div class="inputGroup grid_12">
+							<label for="assignName">Name</label>
+							<input type="text" id="assignName" class="formControl">
+						</div>
+						<div class="inputGroup grid_6 alpha">
+							<label for="assignDate">Assigned On</label>
+							<input type="date" id="assignDate" class="formControl">
+						</div>
+						<div class="inputGroup grid_6 omega">
+							<label for="assignDue">Due Date</label>
+							<input type="date" id="assignDue" class="formControl">
+						</div>
+						<div class="inputGroup grid_12">
+							<label for="assignType">Assignment Type</label>
+							<select id="assignType" class="formControl">
+								<option>Points</option>
+								<option>Percentage</option>
+								<option>Percentage From Points</option>
+								<option>Letter Grade</option>
+								<option>Pass/Fail</option>
+							</select>
+						</div>
+						<div class="inputGroup grid_6 alpha">
+							<label for="assignScore">Max Score</label>
+							<input type="text" id="assignScore" class="formControl">
+						</div>
+						<div class="inputGroup grid_6 omega">
+							<label for="assignEmpty">Empty Value</label>
+							<input type="text" id="assignEmpty" class="formControl">
+						</div>
+					</form>
 				</div>
+				<div class="curveOptions modalPanel">
+					<p>Curve Assignment</p>
+				</div>
+				<div class="weightOptions modalPanel">
+					<p>Weigh assignment</p>
+				</div>
+				<div class="removeConfirmation modalPanel">
+					<p>Are you sure you want to remove this assignment?</p>
+				</div>
+				<div class="copyOptions modalPanel">
+					<p>Copy assignment</p>
+				</div>
+				<div class="exportOptions modalPanel">
+					<p>Download assignment</p>
+				</div>
+				<div class="buttonGroup modalControls clearfix">
+					<button class="button confirm">Apply</button>
+					<button class="button cancel">Cancel</button>
+				</div>
+			</div>
+		</div>
+		<div class="component modalContainer addStudent">
+			<div class="modal container_12 clearfix">
+				<h3>Add a Student</h3>
+				<form class="clearfix">
+					<div class="inputGroup">
+						<label for="studentName">Name</label>
+						<input type="text" id="studentName">
+					</div>
+					<div class="inputGroup">
+						<label for="studentID">Student ID</label>
+						<input type="text" id="studentID">
+					</div>
+				</form>
+				<div class="buttonGroup modalControls clearfix">
+					<button class="button confirm" onclick="addStudent();">Submit</button>
+					<button class="button cancel">Cancel</button>
+				</div>
+			</div>
+		</div>
+		<div class="component modalContainer addAssignment">
+			<div class="modal container_12 clearfix">
+				<h3>Add an Assignment</h3>
+				<form class="clearfix">
+					<div class="inputGroup grid_12">
+						<label for="assignName">Name</label>
+						<input type="text" id="assignName" class="formControl">
+					</div>
+					<div class="inputGroup grid_6 alpha">
+						<label for="assignDate">Assigned On</label>
+						<input type="date" id="assignDate" class="formControl">
+					</div>
+					<div class="inputGroup grid_6 omega">
+						<label for="assignDue">Due Date</label>
+						<input type="date" id="assignDue" class="formControl">
+					</div>
+					<div class="inputGroup grid_12">
+						<label for="assignType">Assignment Type</label>
+						<select id="assignType" class="formControl">
+							<option>Points</option>
+							<option>Percentage</option>
+							<option>Percentage From Points</option>
+							<option>Letter Grade</option>
+							<option>Pass/Fail</option>
+						</select>
+					</div>
+					<div class="inputGroup grid_6 alpha">
+						<label for="assignScore">Max Score</label>
+						<input type="text" id="assignScore" class="formControl">
+					</div>
+					<div class="inputGroup grid_6 omega">
+						<label for="assignEmpty">Empty Value</label>
+						<input type="text" id="assignEmpty" class="formControl">
+					</div>
+				</form>
 			</div>
 		</div>
 	</body>

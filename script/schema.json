@@ -1,36 +1,36 @@
 {
-	"school": [
-		{
-			"name": "testSchool",
-			"students": [
-				{
-					"name": "Student Smith"
-				},
-				{
-					"name": "Student Jones"
-				}
-			],
-			"teachers": [
-				{
-					"name": "Teacher Doe"
-				}
-			],
-			"classes": [
-				{
-					"name": "Physics"
-				},
-				{
-					"name": "Math"
-				}
-			],
-			"assignments": [
-				{
-					"name": "Assignment 1"
-				},
-				{
-					"name": "Assignment 2"
-				}
-			]
+	"schools": {
+		"in-01": {
+			"name": "Test School 1"
+		},
+		"in-02": {
+			"name": "Test School 2"
 		}
-	]
+	},
+	"students": {},
+	"teachers": {
+		"jgross": {
+			"fName": "Jason",
+			"lName": "Gross",
+			"school": "in-01"
+		},
+		"jsmith": {
+			"fName": "John",
+			"lName": "Smith",
+			"school": "in-02"
+		}
+	},
+	"classes": {
+		"in-01-history101": {
+			"name": "History 101",
+			"school": "in-01",
+			"teacher": "jgross"
+		},
+		"in-01-Science101": {
+			"name": "Science 101",
+			"school": "in-02",
+			"teacher": "jsmith"
+		}
+	},
+	"assignments": {}
 }
