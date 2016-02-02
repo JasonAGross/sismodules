@@ -7,25 +7,38 @@ $('.modalNav li').click(function(){
 	});
 });
 
-$('.toggleSettings').click(function() {
-	var pos = $(this).offset(),
+$('.toggleSettings').click({modal: "assignmentSettings"}, positionModal);
+$('.addNewStudent button').click({modal: "addStudent"},positionModal);
+
+function positionModal(event) {
+	// Position modal based on the clicked button
+	var modal = event.data.modal,
+		pos = $(this).offset(),
 		topOffset = $(this).outerHeight() + 35,
-		leftOffset = ($('.assignmentSettings').width() / 2) - ($(this).width() / 2);
-	$('.assignmentSettings').toggleClass('active').attr('style','top:' + (pos.top + topOffset) + ';left:' + (pos.left - leftOffset) + ';');
-});
+		leftOffset = ($('.' + modal).width() / 2) - ($(this).width() / 2);
+	$('.' + modal).toggleClass('active').attr('style','top:' + (pos.top + topOffset) + ';left:' + (pos.left - leftOffset) + ';');
 
-$('.addNewStudent button').click(function() {
-	var pos = $(this).offset(),
-		topOffset = $(this).outerHeight() + 35,
-		leftOffset = ($('.addStudent').width() / 2) - ($(this).width() / 2);
-	$('.addStudent').toggleClass('active').attr('style','top:' + (pos.top + topOffset) + ';left:' + (pos.left - leftOffset) + ';');
-});
+	// Do some checks to make sure the modal is still on the screen.
+	var newPos = $('.' + modal).offset(),
+		areaHeight = $(window).height(),
+		areaWidth = $(window).width()
+	if (newPos.left < 0) {
+		$('.' + modal).attr('style', 'left: 1%;')
+	} else if (newPos.top > areaHeight - $('.' + modal).outerHeight()) {
+		$('.' + modal).attr('style', 'top:' + newPos.top - $('.' + modal).outerHeight())
+	} else if (newPos.left > areaWidth - $('.' + modal).width()) {
+		$('.' + modal).attr('style', 'left:' + areaWidth - $('.' + modal).width())
+	}
+}
 
+/* Data Interaction */ 
+$('#newStudent').click(addStudent);
 
-var dataRef = new Firebase('https://shining-inferno-9979.firebaseio.com/');
+var ref = new Firebase('https://shining-inferno-9979.firebaseio.com/');
 
 function addStudent() {
-	dataRef.push({
+	var studentRef = ref.child("students");
+	studentRef.push({
 		"name": $('#studentName').val(),
 		"studentID": $('#studentID').val()
 	});
